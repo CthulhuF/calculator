@@ -11,7 +11,7 @@
 '#' - exit 
 '~' - switch scalar / vector calculation 
 
-*/
+*/ //COMMANDS 
 
 
 float numb_operation(char operation){
@@ -91,7 +91,7 @@ float vector_operation(char operation){
 
     }
 
-}
+}//VECTOR OPERATIONS
 
 
 
@@ -128,4 +128,4 @@ int main() {
             continue;
         }
     }
-}
+}//MAIN
