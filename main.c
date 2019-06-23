@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* 
-'+' - addition \ 
-'-' - substraction } also in vector calculator 
-'*' - multiplication / (scalar multiplication in vector 
-'/' - division 
-'^' - degree 
-'!' - factorial 
-'#' - exit 
-'~' - switch scalar / vector calculation 
+/*
+'+' - addition              \
+'-' - substraction          } also in vector calculator
+'*' - multiplication        / (scalar multiplication in vector)
+'/' - division
+'^' - degree
+'!' - factorial
+'#' - exit
+'~' - switch scalar / vector calculation
 
-*/ //COMMANDS 
+*/ //list of commands
 
 
 float numb_operation(char operation){
@@ -45,10 +45,10 @@ float numb_operation(char operation){
             }
             return z;
     }
-} //SIMPLE OPERATIONS 
+} //SIMPLE OPERATIONS
 
 float vector_operation(char operation){
-    float *A, *B, temp;
+    float *A, *B, temp=1;
     const
     int size;
     printf("Enter size of array");
@@ -83,15 +83,15 @@ float vector_operation(char operation){
 
         case '*':
             for (int i = 0; i < size; i++) {
-                A[i] = A[i] * B[i];
+                temp = temp * (A[i]+B[i]);
             }
 
-            printf("%f", &A);
+            printf("%f", temp);
             break;
 
     }
 
-}//VECTOR OPERATIONS
+} //VECTOR OPERATIONS
 
 
 
@@ -124,8 +124,10 @@ int main() {
             continue;
         }
         if (switchCalc == 1) {
-            printf(" %a", vector_operation(operation));
+            printf(" %.0f", vector_operation(operation));
             continue;
         }
     }
-}//MAIN
+} //main
+
+
